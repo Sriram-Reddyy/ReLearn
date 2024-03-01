@@ -100,3 +100,41 @@ Need to position content-div  relative to child nodes or child elements (course-
 
     ->Auto Hide one by one when you reduce width
     ->After some min-width show new menu or other options div section need to check on this
+
+13. If I set parent as flex container and use float it doesnt work. Need to check if I can do it some other way or style flex-children. 
+-> Can do this using "space-between" or grid layout
+
+14. Flex containers fits exactly on the children elemnts.
+15.  ![alt text](<Screenshot 2024-03-01 145454.png>)
+
+    aligh-items : center;
+
+    ->This helps in aigning item in center with respect to div or flex box or any other HTML content element.\
+
+16. ![alt text](<Screenshot 2024-03-01 160207.png>) ![alt text](<Screenshot 2024-03-01 160201.png>)
+
+        "space-between" property sets the two flex boxes apart
+            just like shown in the picture.
+
+17. ![alt text](<Screenshot 2024-03-01 164124.png>) ![alt text](<Screenshot 2024-03-01 164115.png>)
+
+    Using "white-space" : nowrap prevented "Get Certified" go to next page. This helps a lot.
+
+18. ![alt text](<Screenshot 2024-03-01 165309.png>)
+
+        window.innerWidth; window.innerHeight; 
+        elemnt.offSetWidth, element.offSetLeft; -> These are some direct properties that gives me dimensions i.e endpoints but problem is they return integers
+        instead of float values
+
+19. Solved things to an extent but need to see how to auto hide things on minimizing windoes.
+
+    ->Doesnt work through arlier approach of this : 
+        ![alt text](<Screenshot 2024-03-01 183359.png>)
+
+    Because on the left container we can't do this need to look for some other way and also make that work.
+    And its also resouce intensive a lot. 
+    ![alt text](<Screenshot 2024-03-01 183234.png>)
+    We can see on left there is no point in checking like that
+    ->What is I style flex - elements? will that work?
+    
+20. Need to check how to create drop box menu. These are very important. : How about uing Z-index?

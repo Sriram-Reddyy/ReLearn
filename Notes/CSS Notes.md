@@ -138,3 +138,24 @@ Need to position content-div  relative to child nodes or child elements (course-
     ->What is I style flex - elements? will that work?
     
 20. Need to check how to create drop box menu. These are very important. : How about uing Z-index?
+
+
+21. While working on menu containers -> This is how I understood browser rendering works :
+
+    -> First Browser renders everything on resizing, but due to overflow : hidden the flex child "Services" is hidden. But there is an intersection : 
+
+    ![alt text](<WhatsApp Image 2024-03-02 at 13.48.49.jpeg>) 
+    ![alt text](<WhatsApp Image 2024-03-02 at 13.48.50 (1).jpeg>) 
+    ![alt text](<WhatsApp Image 2024-03-02 at 13.48.50.jpeg>)
+    
+    ![alt text](<Screenshot 2024-03-02 133855.png>)
+
+    its because the child flex item is hidden so thats why the right element is moved to left. Even though its hidden it is still present so thats why there are property values of getBounRect(); Now I have to see how this will happen when I keep display : "hidden".
+
+    ![alt text](<Screenshot 2024-03-02 134352.png>)
+    ![alt text](<Screenshot 2024-03-02 134407.png>)
+
+    <video controls src="WhatsApp Video 2024-03-02 at 13.55.43.mp4" title="Title"></video>
+
+    In the above video if I see the "Services" and "Jobs" section intersect thats why the values are coming like that. Those are relative to view port. CSS doesnt hide entire thing. It only hides visibly but not like completly "MAYAM" chestadi.  
+            

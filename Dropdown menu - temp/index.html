@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #menu {
+            background-color: antiquewhite;
+        }
+        a {
+            background-color: aqua;
+            padding: 15px;
+            display: inline-block;
+            position: relative;
+        }
+        #sub-menu {            
+            position: absolute;
+            top: 48.5px;
+            left: 0;
+            display: none;
+            flex-direction: column;
+            width: fit-content;
+            border: 1px black solid;
+            transition: opacity 0.3s ease-in-out;
+            background-color: white;
+        }
+        #sub-menu > span{
+            padding: 5px;
+        }
+        #sub-menu > span:hover{
+            background-color: beige;
+        }
+
+        #menu > p{
+            background-color: red;
+        }
+    </style>
+    <script>
+        function displayDropDown(){
+            const subMenu = document.getElementById("sub-menu");
+            subMenu.style.display = "flex";
+        }
+        function closeDropDown(){
+            const subMenu = document.getElementById("sub-menu");
+            subMenu.style.display = "none";
+        }
+        window.onload = ()=>{
+            console.log(123);
+            const menu = document.getElementById("menu");
+            const subMenu = document.getElementById("sub-menu");
+            menu.onmouseleave = closeDropDown;
+            subMenu.onmouseleave = closeDropDown;
+            menu.onmouseover = displayDropDown;
+            subMenu.onmouseover = displayDropDown;
+        };
+    </script>
+</head>
+<body>
+    <div id="menu">
+        <a>Home</a>
+        <a>Login
+            <div id="sub-menu">
+                <span>Menu01</span>
+                <span>Menu02</span>
+                <span>Menu03</span>
+                <span>Menu04</span>
+            </div>
+        </a>
+        <a>Signup</a>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Quaerat fugiat impedit deserunt. Officia, debitis
+              accusamus sapiente vitae, recusandae voluptas deserunt tenetur aliquid ex delectus tempore 
+              rerum velit accusantium, id consequuntur.</p>
+
+    </div>
+</body>
+</html>

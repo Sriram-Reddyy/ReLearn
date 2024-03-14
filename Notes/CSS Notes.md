@@ -158,4 +158,27 @@ Need to position content-div  relative to child nodes or child elements (course-
     <video controls src="WhatsApp Video 2024-03-02 at 13.55.43.mp4" title="Title"></video>
 
     In the above video if I see the "Services" and "Jobs" section intersect thats why the values are coming like that. Those are relative to view port. CSS doesnt hide entire thing. It only hides visibly but not like completly "MAYAM" chestadi.  
-            
+
+22. If I see the below pictures since "sub-menu" is inside the "a>" tag thats why it is expanding like that ![alt text](<Screenshot 2024-03-13 203252.png>) ![alt text](<Screenshot 2024-03-13 203236.png>) ![alt text](<Screenshot 2024-03-13 203245.png>)
+
+23. One more thing, we use absolute positioning + Z-index to make drop down as shown below : 
+![alt text](<Screenshot 2024-03-13 203042.png>)
+
+By default all elements position is static we have to mention parent element "position : relative" property for it to act like an ancestor if not the below will happen : 
+
+![alt text](<Screenshot 2024-03-13 205138.png>) ![alt text](<Screenshot 2024-03-13 203310.png>) ![alt text](<Screenshot 2024-03-13 205050.png>)
+
+
+    And now I made changes like below this is the result : 
+
+![alt text](<Screenshot 2024-03-13 210639.png>)
+
+![alt text](<Screenshot 2024-03-13 205150.png>)
+
+24. Its important to undstand inline vs block vs inline-block elements. For Inline and inline-block elements we can adjust height and width and next element dont start in new line. If you remember when inside element is "Inline" the outer "div" section was not expanding and padding was overflowing. But if inside element is inline-block or block the outside "div" will definitely increase height and width automatically to fill elements. Thats the difference is what I believe. Check the pictures for example
+
+![alt text](<WhatsApp Image 2024-03-13 at 21.11.22.jpeg>) ![alt text](<WhatsApp Image 2024-03-13 at 21.11.26.jpeg>) ![alt text](<WhatsApp Image 2024-03-13 at 21.11.24 (1).jpeg>) ![alt text](<WhatsApp Image 2024-03-13 at 21.11.24.jpeg>)
+
+
+
+If I look above, in case of "P" tag the outer "DIV" is filling it because "P" elements are of block type. In case of "a" tag it is an inline element so thats why outer "DIV" is not filling up and bcz of padding it is being overflowed. but if i keep "display : inline-block" it will not overflow, outer "DIV" will contain it. Thats the whole point.
